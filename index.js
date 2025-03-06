@@ -73,10 +73,11 @@ async function onTrack(event, settings) {
 
   // The code below serves as an example of how you might implement your Lambda function destination to forward the
   // event to a REST API. You can modify or replace this code below with your own implementation as needed.
+  console.log(`BLOO-POKEMON:${settings.favoritePokemon}`)
   const endpoint = `https://pokeapi.co/api/v2/pokemon/${settings.favoritePokemon}`; // replace with your endpoint
 
   await fetch(endpoint, {
-    method: 'GET',
+    method: 'POST',
     headers: {
       Authorization: `Basic ${btoa(settings.apiKey + ':')}`,
       'Content-Type': 'application/json'
