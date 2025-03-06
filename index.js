@@ -81,8 +81,8 @@ async function onTrack(event, settings) {
       Authorization: `Basic ${btoa(settings.apiKey + ':')}`,
       'Content-Type': 'application/json'
     },
-    // body: JSON.stringify(event)
-    body: JSON.stringify({ leastFavoritePokemon: 'Psyduck' }) // Convert to JSON string
+    body: JSON.stringify(event)
+    // body: JSON.stringify({ leastFavoritePokemon: 'Psyduck' }) // Convert to JSON string
   });
 }
 
