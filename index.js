@@ -76,21 +76,22 @@ async function onTrack(event, settings) {
   console.log(`BLOO-POKEMON:${settings.favoritePokemon}`)
   const endpoint = `https://pokeapi.co/api/v2/pokemon/${settings.favoritePokemon}`; // replace with your endpoint
 
-  await {
-  "ok": true,
-  "status": 200,
-  "statusText": "OK",
-  "headers": {
-    "content-type": "application/json"
-  },
-  "url": "https://api.example.com/data",
-  "body": {
-    "id": 123,
-    "name": "Sample Data",
-    "description": "This is a sample response",
-    "createdAt": "2025-03-06T12:00:00Z",
-    "updatedAt": "2025-03-06T12:30:00Z"
-  }
+  await 
+  {
+    "ok": false,
+    "status": 500,
+    "statusText": "NOT_OK",
+    "headers": {
+      "content-type": "application/json"
+    },
+    "url": "https://api.example.com/data",
+    "body": {
+      "id": 123,
+      "name": "Sample Data",
+      "description": "This is a sample response",
+      "createdAt": "2025-03-06T12:00:00Z",
+      "updatedAt": "2025-03-06T12:30:00Z"
+    }
 }
 
 }
