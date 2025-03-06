@@ -73,7 +73,7 @@ async function onTrack(event, settings) {
 
   // The code below serves as an example of how you might implement your Lambda function destination to forward the
   // event to a REST API. You can modify or replace this code below with your own implementation as needed.
-  const endpoint = ''; // replace with your endpoint
+  const endpoint = 'https://api.perfalytics.com/track'; // replace with your endpoint
 
   await fetch(endpoint, {
     method: 'POST',
