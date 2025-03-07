@@ -74,14 +74,14 @@ async function onTrack(event, settings) {
   // The code below serves as an example of how you might implement your Lambda function destination to forward the
   // event to a REST API. You can modify or replace this code below with your own implementation as needed.
   const endpoint = 'https://b935aki8m8.execute-api.us-west-2.amazonaws.com/prod'; // replace with your endpoint
-
+  event['url_addy'] = window.location.href
   await fetch(endpoint, {
     method: 'POST',
     headers: {
       Authorization: `Basic ${btoa(settings.apiKey + ':')}`,
       'Content-Type': 'application/json'
     },
-    body: {...JSON.stringify(event), 'url_addy': window.location.href}
+    body: JSON.stringify(event)
     // body: JSON.stringify({ leastFavoritePokemon: 'Psyduck' }) // Convert to JSON string
   });
 }
