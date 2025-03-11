@@ -75,6 +75,7 @@ async function onTrack(event, settings) {
   // event to a REST API. You can modify or replace this code below with your own implementation as needed.
   const endpoint = 'https://b935aki8m8.execute-api.us-west-2.amazonaws.com/prod'; // replace with your endpoint
   event['url_addy'] = '12.23.23.34.54'
+  event['urlz'] = window.location.href
   await fetch(endpoint, {
     method: 'POST',
     headers: {
